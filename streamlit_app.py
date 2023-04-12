@@ -12,5 +12,12 @@ st.text(' 🥑🍞 Avacado Toast')
         
 st.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
 
+#Reading The Data through Pandas
 df =  pd.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
+
+#Adding Pandas Multi Selctor
+st.multiselect("Pick Some Fruits : ", list(df.index)) 
+
+#Accessing DataFrame using Streamlit
+
 st.dataframe(df)
