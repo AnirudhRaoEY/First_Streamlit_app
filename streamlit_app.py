@@ -21,5 +21,4 @@ fruits_selected = st.multiselect("Pick Some Fruits : ", list(df.index),['Avocado
 fruits_to_show =  df.loc[fruits_selected]
 
 #Accessing DataFrame using Streamlit
-
-st.dataframe(df)
+st.dataframe(fruits_to_show )
