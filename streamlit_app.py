@@ -14,7 +14,7 @@ st.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
 
 #Reading The Data through Pandas
 df =  pd.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
-df =  df.set_index('Fruits')
+df =  df.set_index('Fruit')
 
 #Adding Pandas Multi Selctor
 st.multiselect("Pick Some Fruits : ", list(df.index)) 
