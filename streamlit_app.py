@@ -17,7 +17,8 @@ df =  pd.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_m
 df =  df.set_index('Fruit')
 
 #Adding Pandas Multi Selctor
-st.multiselect("Pick Some Fruits : ", list(df.index)) 
+fruits_selected = st.multiselect("Pick Some Fruits : ", list(df.index),['Avocado','Strawberrier']) 
+fruits_to_show =  df.loc[fruits_selected]
 
 #Accessing DataFrame using Streamlit
 
